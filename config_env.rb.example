@@ -1,0 +1,7 @@
+# Copy this file to config_env.rb
+# Fill in Github client ID and secret from Github OAuth settings
+
+config_env do
+  set 'GH_CLIENT_ID', '...'
+  set 'GH_CLIENT_SECRET', '...'
+end
