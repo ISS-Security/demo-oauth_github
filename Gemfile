@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'sinatra'
-gem 'config_env'
+gem 'puma'
+gem 'econfig'
 gem 'http'
