@@ -1,7 +1,10 @@
-source 'https://rubygems.org'
-ruby '~> 2.5.0'
+# frozen_string_literal: true
 
-gem 'roda'
-gem 'puma'
+source 'https://rubygems.org'
+ruby '~> 2.6.2'
+
 gem 'econfig'
+gem 'puma'
+gem 'roda'
+
 gem 'http'

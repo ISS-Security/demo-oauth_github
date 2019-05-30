@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Roda web app demonstrating Github OAuth
 # Run using `$ rackup -p 4567`
 
@@ -46,19 +48,19 @@ class OAuthDemo < Roda
 
     routing.get 'github_callback' do
       result = HTTP.headers(accept: 'application/json')
-                  .post('https://github.com/login/oauth/access_token',
-                        form: { client_id: config.GH_CLIENT_ID,
-                                client_secret: config.GH_CLIENT_SECRET,
-                                code: routing.params['code'] })
-                  .parse
+                   .post('https://github.com/login/oauth/access_token',
+                         form: { client_id: config.GH_CLIENT_ID,
+                                 client_secret: config.GH_CLIENT_SECRET,
+                                 code: routing.params['code'] })
+                   .parse
 
       puts "ACCESS TOKEN: #{result}\n"
 
       gh_account = HTTP.headers(user_agent: 'Config Secure',
                                 authorization: "token #{result['access_token']}",
                                 accept: 'application/json')
-                      .get('https://api.github.com/user')
-                      .parse
+                       .get('https://api.github.com/user')
+                       .parse
 
       puts "GITHUB ACCOUNT: #{gh_account}"
 

@@ -1,26 +1,28 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.4.0)
-    domain_name (0.5.20160310)
+    addressable (2.6.0)
+      public_suffix (>= 2.0.2, < 4.0)
+    domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
-    econfig (2.0.0)
-    http (2.0.1)
+    econfig (2.1.0)
+    http (4.1.1)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
-      http-form_data (~> 1.0.1)
+      http-form_data (~> 2.0)
       http_parser.rb (~> 0.6.0)
-    http-cookie (1.0.2)
+    http-cookie (1.0.3)
       domain_name (~> 0.5)
-    http-form_data (1.0.1)
+    http-form_data (2.1.1)
     http_parser.rb (0.6.0)
-    puma (3.8.2)
-    rack (2.0.5)
-    roda (3.8.0)
+    public_suffix (3.1.0)
+    puma (3.12.1)
+    rack (2.0.7)
+    roda (3.20.0)
       rack
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.2)
+    unf_ext (0.0.7.6)
 
 PLATFORMS
   ruby
@@ -32,7 +34,7 @@ DEPENDENCIES
   roda
 
 RUBY VERSION
-   ruby 2.5.1p57
+   ruby 2.6.2p47
 
 BUNDLED WITH
-   1.16.1
+   2.0.1
