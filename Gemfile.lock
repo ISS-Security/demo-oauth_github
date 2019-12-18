@@ -17,7 +17,7 @@ GEM
     http_parser.rb (0.6.0)
     public_suffix (3.1.0)
     puma (3.12.1)
-    rack (2.0.7)
+    rack (2.0.8)
     roda (3.20.0)
       rack
     unf (0.1.4)
