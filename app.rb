@@ -1,7 +1,15 @@
 # frozen_string_literal: true
 
 # Roda web app demonstrating Github OAuth
-# Run using `$ rackup -p 4567`
+# Install:
+# - clone this repo
+# - rbenv install 2.6.2
+# - gem install bundler:2.0.1
+# - bundle
+# - setup OAuth app for Github and get Github id/secret
+# - put OAuth id/secret in config/secrets.yml
+#
+# Run using: rackup -p 4567
 
 require 'roda'
 require 'econfig'
@@ -34,7 +42,7 @@ class OAuthDemo < Roda
       account = JSON.parse(session[:auth_info])
       name = account['name']
       email = account['email']
-      "THE SECRET TO LIFE: Your best and worst friend is #{name} at #{email}"\
+      "THE SECRET TO LIFE: Both your best friend and worst enemy is #{name} at #{email}"\
       "<BR><a href='/logout'>logout</a>"
     end
 

@@ -33,8 +33,5 @@ DEPENDENCIES
   puma
   roda
 
-RUBY VERSION
-   ruby 2.6.2p47
-
 BUNDLED WITH
    2.0.1
