@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'econfig'
+gem 'figaro'
 gem 'puma'
 gem 'roda'
 
