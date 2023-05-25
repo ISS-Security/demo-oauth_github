@@ -3,13 +3,14 @@
 # Roda web app demonstrating Github OAuth
 # Install:
 # - clone this repo
-# - rbenv install 3.1.1
+# - rbenv install 3.2.1
 # - bundle
 # - setup OAuth app for Github and get Github id/secret
 # - put OAuth id/secret in config/secrets.yml
 #
-# Run using: rackup -p 4567
+# Run using: puma -p 4567
 
+require 'rack/session'
 require 'roda'
 require 'figaro'
 require 'http'
@@ -30,7 +31,9 @@ class OAuthDemo < Roda
 
   ONE_MONTH = 30 * 24 * 60 * 60 # in seconds
 
-  use Rack::Session::Cookie, expire_after: ONE_MONTH, secret: 'not-a-secret'
+  use Rack::Session::Cookie,
+      expire_after: ONE_MONTH,
+      secret: config.SESSION_SECRET
 
   def config
     @config ||= OAuthDemo.config
