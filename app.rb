@@ -3,12 +3,15 @@
 # Roda web app demonstrating Github OAuth
 # Install:
 # - clone this repo
-# - rbenv install 3.2.1
+# - rbenv install $(cat .ruby-version)
 # - bundle
 # - setup OAuth app for Github and get Github id/secret
 # - put OAuth id/secret in config/secrets.yml
 #
-# Run using: puma -p 4567
+# Run using:
+#   rake run
+# or:
+#   bundle exec puma -p 4567
 
 require 'rack/session'
 require 'roda'

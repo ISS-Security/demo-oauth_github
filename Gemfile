@@ -8,3 +8,5 @@ gem 'rack-session', '~>2.0'
 gem 'roda'
 
 gem 'http'
+
+gem 'rake'
